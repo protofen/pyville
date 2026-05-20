@@ -51,7 +51,7 @@ translation = {
     "wood_cnt": "ПОЛЕНЬЯ",
     "words": "СОБРАНО СЛОВ"
 }
-data = requests.get(f"https://godville.net/gods/api/{open('api.txt').read().strip()}").json()
+data = requests.get(f"https://godville.net/gods/api/{open('api.txt').read()}").json()
 for k, v in data.items():
     if v not in [None, "", [], {}]:
         ru_name = translation.get(k, k.upper())
